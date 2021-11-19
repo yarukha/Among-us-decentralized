@@ -12,4 +12,6 @@
 
 QLabel* getEnterIDCode();
 
+void onCloseEnterIDCode(), resetCode();
+
 #endif

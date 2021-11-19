@@ -78,4 +78,22 @@ QLabel* getEnterIDCode(){
 
 } 
 
+void onCloseEnterIDCode() {
+    playSound("Fix_Wiring_task_close_sound.wav");
+    resetCode();
+    if(currEnterIDCodeLabel) {
+        delete currEnterIDCodeLabel;
+        currEnterIDCodeLabel = nullptr;
+    }
+    if(currEnterIDCodePixmap) {
+        delete currEnterIDCodePixmap;
+        currEnterIDCodePixmap = nullptr;
+    }
+}
+
+void resetCode() {
+    for(quint i = 0 i< DIGIT_NUMBER; i++){
+        code[i] = DIGIT_UNDEFINED;
+    }
+}
 

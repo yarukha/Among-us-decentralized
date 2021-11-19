@@ -564,6 +564,8 @@ void InGameUI::closeTask() {
         case IN_GAME_GUI_ASTEROIDS:
         onCloseAsteroids();
         break;
+        case IN_GAME_GUI_ENTER_ID_CODE:
+        onCloseEnterIDCode();
         default:
         break;
     }
@@ -591,7 +593,7 @@ void InGameUI::onClickUse() {
             break;
         case TASK_ENTER_ID_CODE:
             currentTask = task;
-            currentInGameGUI = IN_GAME_GUI_NONE;
+            currentInGameGUI = IN_GAME_GUI_ENTER_ID_CODE;
             qLabel = getEnterIDCode();
             break;
 
