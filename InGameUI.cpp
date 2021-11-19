@@ -30,7 +30,8 @@ InGameUI::InGameUI(/*QString nickname, */QLabel *parent) : QLabel(parent), curre
         new Task(TASK_FIX_WIRING, QPoint(4060, 360)),
         new Task(TASK_FIX_WIRING, QPoint(5433,2444)),
         new Task(TASK_FIX_WIRING, QPoint(7455,2055)),
-        new Task(TASK_ASTEROIDS,  QPoint(6653, 900))
+        new Task(TASK_ASTEROIDS,  QPoint(6653, 900)),
+        new Task(TASK_ENTER_ID_CODE,QPoint(X_SPAWN,Y_SPAWN)),
     };
     /*tasksLocations[TASK_FIX_WIRING] = {QPoint(4060, 360), QPoint(5433,2444),QPoint(7455,2055)};
     tasksLocations[TASK_ASTEROIDS] = {QPoint(6653,900)};*/
@@ -588,6 +589,12 @@ void InGameUI::onClickUse() {
             currentInGameGUI = IN_GAME_GUI_ASTEROIDS;
             qLabel = getAsteroids(elapsedTimer->elapsed());
             break;
+        case TASK_ENTER_ID_CODE:
+            currentTask = task;
+            currentInGameGUI = IN_GAME_GUI_NONE;
+            qLabel = getEnterIDCode();
+            break;
+
         default:
             return;
         }
