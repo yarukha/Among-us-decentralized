@@ -42,7 +42,7 @@ QPair<QPixmap*, QPainter*> getEnterIDCodePixmapPainter()
 }
 
 QLabel* getEnterIDCode(){
-    if(!currEnterIDCodePixmap) {currEnterIDCodePixmap = getQPixmap("EnterIDCode.png");};
+    if(!EnterIDCodePixmap) {EnterIDCodePixmap = getQPixmap("EnterIDCode.png");};
 
     playSound("Fix_Wiring_task_open_sound.wav");
     QLabel* qFrame = new QLabel;
