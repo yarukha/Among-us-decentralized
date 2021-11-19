@@ -2,10 +2,10 @@ QT += widgets
 QT += network
 QT += multimedia
 QMAKE_CXXFLAGS += -std=c++17
-LIBS += \
-   -lhelib \
-   -lpthread \
-   -lntl
+#LIBS += \
+#   -lhelib \
+#   -lpthread \
+#   -lntl
 
 SOURCES += \
     InGameUI.cpp \
@@ -17,7 +17,8 @@ SOURCES += \
     Server.cpp \
     Client.cpp \
     Task.cpp \
-    dummy_helib_test.cpp
+    EnterIDCode.cpp
+    # dummy_helib_test.cpp
 
 HEADERS += \
     InGameUI.h \
@@ -28,6 +29,7 @@ HEADERS += \
     qPlus.h \
     Server.h \
     Client.h \
-    Task.h
+    Task.h \
+    EnterIDCode.h
 
 
