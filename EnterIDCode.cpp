@@ -58,7 +58,7 @@ QLabel* getEnterIDCode(){
     QPair<QPixmap*, QPainter*> pixmapPainter = getEnterIDCodePixmapPainter();
     QPixmap* pixmap = pixmapPainter.first;
     QPainter* painter = pixmapPainter.second;
-
+    qDebug() << "passé" ;
     delete painter;
     qLabel->setPixmap(*pixmap);
 
