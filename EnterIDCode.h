@@ -10,6 +10,7 @@
 #define MAX_DIGIT 9
 #define DIGIT_UNDEFINED MAX_DIGIT +1
 
+QPair<QPixmap*, QPainter*> getEnterIDCodePixmapPainter();
 QLabel* getEnterIDCode();
 
 void onCloseEnterIDCode(), resetCode();
