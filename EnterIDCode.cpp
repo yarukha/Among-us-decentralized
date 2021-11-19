@@ -92,7 +92,7 @@ void onCloseEnterIDCode() {
 }
 
 void resetCode() {
-    for(quint8 i = 0 i< DIGIT_NUMBER; i++){
+    for(quint8 i = 0; i< DIGIT_NUMBER; i++){
         code[i] = DIGIT_UNDEFINED;
     }
 }
