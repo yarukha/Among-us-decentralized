@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QPoint>
 
-enum TaskType{TASK_FIX_WIRING,TASK_ASTEROIDS,TASK_SWIPE};
+enum TaskType{TASK_FIX_WIRING,TASK_ASTEROIDS,TASK_SWIPE,TASK_ENTER_ID_CODE};
 
 class Task : public QObject {
 public:
