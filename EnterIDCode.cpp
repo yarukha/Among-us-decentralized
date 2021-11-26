@@ -40,7 +40,10 @@ QPair<QPixmap*, QPainter*> getEnterIDCodePixmapPainter()
     painter->drawImage(0, 0, EnterIDCodeBackgroundPixmap->toImage());
     
     QString s = getStringofcode(); 
-    painter-> drawText(50, 50, 30, 10,0,s);
+    QFont font = painter->font();
+    font->setPixelSize(50);
+    painter->setFont(font)
+    painter-> drawText(300, 650, 100, 50,0,s);
     return qMakePair(pixmap, painter);
 }
 
