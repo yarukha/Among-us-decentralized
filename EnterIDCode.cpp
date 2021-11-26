@@ -40,12 +40,12 @@ QPair<QPixmap*, QPainter*> getEnterIDCodePixmapPainter()
     painter->drawImage(0, 0, EnterIDCodeBackgroundPixmap->toImage());
     
     QString s = getStringofcode(); 
-    painter->drawStaticText(200, 300, QStaticText(s));
+    painter-> drawText(50, 50, 30, 10,0,s);
     return qMakePair(pixmap, painter);
 }
 
 QLabel* getEnterIDCode(){
-    if(!EnterIDCodeBackgroundPixmap) {EnterIDCodeBackgroundPixmap = getQPixmap("EnterIDCode.png");};
+    if(!EnterIDCodeBackgroundPixmap) {EnterIDCodeBackgroundPixmap = getQPixmap("EnterIdCode_resized.png");};
 
     playSound("Fix_Wiring_task_open_sound.wav");
     QLabel* qFrame = new QLabel;
