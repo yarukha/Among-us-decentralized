@@ -38,14 +38,13 @@ QPair<QPixmap*, QPainter*> getEnterIDCodePixmapPainter()
     QPixmap* pixmap = new QPixmap(EnterIDCodeBackgroundPixmap->size());
     QPainter* painter = new QPainter(pixmap);
     painter->drawImage(0, 0, EnterIDCodeBackgroundPixmap->toImage());
+    
+    QString s = getStringofcode(); 
+    painter->drawStaticText(200, 300, QStaticText(s));
     return qMakePair(pixmap, painter);
 }
 
 QLabel* getEnterIDCode(){
-    double xscale = printer.pageRect().width()/double(ui->table_log->width());
-    double yscale = printer.pageRect().height()/double(ui->table_log->height());
-    double scale = qMin(xscale, yscale);
-    painter.scale(scale, scale);
     if(!EnterIDCodeBackgroundPixmap) {EnterIDCodeBackgroundPixmap = getQPixmap("EnterIDCode.png");};
 
     playSound("Fix_Wiring_task_open_sound.wav");
@@ -57,7 +56,8 @@ QLabel* getEnterIDCode(){
     hbox->addStretch();
     qFrame->setLayout(hbox);
 
-    //randomCode();
+    randomCode();
+
     
     QPair<QPixmap*, QPainter*> pixmapPainter = getEnterIDCodePixmapPainter();
     QPixmap* pixmap = pixmapPainter.first;
