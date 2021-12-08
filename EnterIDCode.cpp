@@ -135,7 +135,7 @@ void WriteDigit(QPainter* painter, quint16 position, quint16 digit){
 
 
 void onMouseEventEnterIDCode(QMouseEvent* mouseEvent)
-{
+{   
     QPair<QPixmap*, QPainter*> pixmapPainter = getFixWiringPixmapPainter();
     QPixmap* qBackgroundPixmap = pixmapPainter.first;
     QSize pixmapSize = qBackgroundPixmap->size(),

@@ -22,6 +22,8 @@
 QPair<QPixmap*, QPainter*> getEnterIDCodePixmapPainter();
 QLabel* getEnterIDCode();
 
-void onCloseEnterIDCode(), resetCode();
+void onMouseEventEnterIDCode(QMouseEvent* mouseEvent),
+    onCloseEnterIDCode(),
+    resetCode();
 
 #endif

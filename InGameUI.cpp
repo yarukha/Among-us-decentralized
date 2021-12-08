@@ -705,6 +705,9 @@ void InGameUI::mousePressOrDoubleClick(QMouseEvent *mouseEvent) {
         else if(currentInGameGUI == IN_GAME_GUI_ASTEROIDS) {
             onMouseEventAsteroids(mouseEvent);
         }
+        else if(currentInGameGUI == IN_GAME_GUI_ENTER_ID_CODE) {
+            onMouseEventEnterIDCode(mouseEvent);
+        }
     }
 }
 
